@@ -11,11 +11,11 @@ interface Values {
     firstName: string;
     secondName: string;
     address: string;
-    houseNumber: number;
+    houseNumber: any;
     city: string;
-    apartmentNumber: number;
+    apartmentNumber: any;
     intercomCode: string;
-    phone: number;
+    phone: any;
 }
 
 const UserDataForm = () => {
@@ -31,11 +31,11 @@ const UserDataForm = () => {
                     firstName: '',
                     secondName: '',
                     address: '',
-                    houseNumber: 0,
+                    houseNumber: '',
                     city: '',
-                    apartmentNumber: 0,
+                    apartmentNumber: '',
                     intercomCode: '',
-                    phone: 0
+                    phone: ''
 
                 }}
                 onSubmit={(
