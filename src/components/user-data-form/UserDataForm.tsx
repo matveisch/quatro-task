@@ -1,6 +1,5 @@
 import React from 'react';
 import { Formik, Field, Form, FormikHelpers } from 'formik';
-import {useFormik} from "formik";
 
 import './UserDataForm.css';
 
@@ -9,6 +8,14 @@ interface Values {
     password: string;
     confirmPassword: string;
     subscription: boolean;
+    firstName: string;
+    secondName: string;
+    address: string;
+    houseNumber: number;
+    city: string;
+    apartmentNumber: number;
+    intercomCode: string;
+    phone: number;
 }
 
 const UserDataForm = () => {
@@ -20,7 +27,16 @@ const UserDataForm = () => {
                     email: '',
                     password: '',
                     confirmPassword: '',
-                    subscription: false
+                    subscription: false,
+                    firstName: '',
+                    secondName: '',
+                    address: '',
+                    houseNumber: 0,
+                    city: '',
+                    apartmentNumber: 0,
+                    intercomCode: '',
+                    phone: 0
+
                 }}
                 onSubmit={(
                     values: Values,
@@ -45,8 +61,8 @@ const UserDataForm = () => {
                                 <Field id="password" name="password" placeholder="*******" />
                             </div>
                             <div className="input">
-                                <label htmlFor="confirm-password"><span>*</span>אימות סיסמה</label>
-                                <Field id="confirm-password" name="confirm-password" placeholder="*******" />
+                                <label htmlFor="confirmPassword"><span>*</span>אימות סיסמה</label>
+                                <Field id="confirmPassword" name="confirmPassword" placeholder="*******" />
                             </div>
                         </div>
                     </div>
@@ -58,37 +74,42 @@ const UserDataForm = () => {
                     <div className="data-inputs">
                         <div className="grid">
                             <div className="input">
-                                <label htmlFor="first-name"><span>*</span>שם פרטי</label>
-                                <Field id="first-name" name="first-name" />
+                                <label htmlFor="firstName"><span>*</span>שם פרטי</label>
+                                <Field id="firstName" name="firstName" />
                             </div>
                             <div className="input">
-                                <label htmlFor="second-name"><span>*</span>שם משפחה</label>
-                                <Field id="second-name" name="second-name" />
-                            </div>
-                            <div className="input">
-                                <label htmlFor="address"><span>*</span>כתובת- רחוב, מס׳ בית, עיר</label>
-                                <Field id="address" name="address" placeholder="בזל"/>
-                            </div>
-                            <div className="input">
-                                <label htmlFor="house-number"><span>*</span>מס׳ בית</label>
-                                <Field id="house-number" name="house-number" placeholder="2"/>
+                                <label htmlFor="secondName"><span>*</span>שם משפחה</label>
+                                <Field id="secondName" name="secondName" />
                             </div>
                             <div className="input">
                                 <label htmlFor="address"><span>*</span>כתובת- רחוב, מס׳ בית, עיר</label>
                                 <Field id="address" name="address" placeholder="בזל"/>
+                            </div>
+                            <div className="input">
+                                <label htmlFor="houseNumber"><span>*</span>מס׳ בית</label>
+                                <Field id="houseNumber" name="houseNumber" placeholder="2"/>
+                            </div>
+                            <div className="input">
+                                <label htmlFor="city"><span>*</span><span>*</span>עיר</label>
+                                <Field id="city" name="city" placeholder="תל אביב יפו"/>
                             </div>
                             <div className="mini-inputs">
                                 <div className="input mini-input">
-                                    <label htmlFor="address"><span>*</span>דירה / כניסה</label>
-                                    <Field id="address" name="address" placeholder="בזל"/>
+                                    <label htmlFor="apartmentNumber"><span>*</span>דירה / כניסה</label>
+                                    <Field id="apartmentNumber" name="apartmentNumber" placeholder="1"/>
                                 </div>
                                 <div className="input mini-input">
-                                    <label htmlFor="house-number"><span>*</span>קוד לבניין</label>
-                                    <Field id="house-number" name="house-number" placeholder="2"/>
+                                    <label htmlFor="intercomCode"><span>*</span>קוד לבניין</label>
+                                    <Field id="intercomCode" name="intercomCode" placeholder="1234#"/>
                                 </div>
+                            </div>
+                            <div className="input">
+                                <label htmlFor="phone"><span>*</span><span>*</span>טלפון</label>
+                                <Field id="phone" name="phone" placeholder="050-00223356"/>
                             </div>
                         </div>
                     </div>
+                    <button type="submit">click</button>
                 </Form>
             </Formik>
         </div>
