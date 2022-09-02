@@ -1,0 +1,28 @@
+@import '../../styles/variables';
+
+#registration {
+  padding: 40px 82px;
+
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    img {
+      width: 54.29px;
+      height: 58.8px;
+    }
+
+    h1 {
+      font-family: 'Helvetica', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 29.4px;
+      color: $green-color;
+
+      span {
+        color: $red-color;
+      }
+    }
+  }
+}

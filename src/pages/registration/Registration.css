@@ -1,0 +1,24 @@
+#registration {
+  padding: 40px 82px;
+}
+#registration header {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+#registration header img {
+  width: 54.29px;
+  height: 58.8px;
+}
+#registration header h1 {
+  font-family: "Helvetica", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 29.4px;
+  color: #1F3813;
+}
+#registration header h1 span {
+  color: #FF002B;
+}
+
+/*# sourceMappingURL=Registration.css.map */
