@@ -80,5 +80,9 @@
   color: #FF002B;
   background-color: #FFFFFF;
 }
+#user-data-form form .errors {
+  color: #FF002B;
+  font-size: 12px;
+}
 
 /*# sourceMappingURL=UserDataForm.css.map */
