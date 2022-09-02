@@ -4,12 +4,9 @@
   #login-question {
     font-size: 16px;
     text-align: end;
-  }
 
-  header {
-    h1 {
-      font-weight: 700;
-      font-size: 21px;
+    span {
+      color: $red-color;
     }
   }
 
@@ -23,11 +20,13 @@
       }
     }
 
+    .mini-input {
+      min-width: 0 !important;
+    }
+
     .input {
       display: flex;
       flex-direction: column;
-
-      min-width: 346px;
 
       border: 2px solid $border-color;
       border-radius: 4px;
@@ -42,16 +41,47 @@
       }
     }
 
-    #user-data {
+    .mini-inputs {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(162px, 1fr));
+      grid-gap: 20px;
+    }
+
+    .header {
+      font-weight: 700;
+      font-size: 21px;
+    }
+
+    .data-inputs {
       display: flex;
       flex-direction: column;
       gap: 29px;
       margin-bottom: 29px;
 
-      #passwords {
-        display: flex;
-        justify-content: space-between;
+    }
+
+    #checkbox {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: start;
+      align-items: center;
+      gap: 12.75px;
+      margin-bottom: 40px;
+
+      label {
+        font-size: 18px;
+        font-weight: 400;
       }
+
+      input {
+        border: 2px solid #1F3813;
+      }
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(346px, 1fr));
+      grid-gap: 17px;
     }
   }
 }
