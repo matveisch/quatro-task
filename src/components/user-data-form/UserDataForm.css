@@ -63,5 +63,22 @@
   grid-template-columns: repeat(auto-fill, minmax(346px, 1fr));
   grid-gap: 17px;
 }
+#user-data-form form #buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+#user-data-form form #buttons .to-shipping {
+  background: #D73037;
+  border-radius: 24px;
+  border: none;
+  color: #FFFFFF;
+  padding: 14px 48px;
+}
+#user-data-form form #buttons .to-cart {
+  border: none;
+  color: #FF002B;
+  background-color: #FFFFFF;
+}
 
 /*# sourceMappingURL=UserDataForm.css.map */

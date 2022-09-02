@@ -83,5 +83,25 @@
       grid-template-columns: repeat(auto-fill, minmax(346px, 1fr));
       grid-gap: 17px;
     }
+
+    #buttons {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+
+      .to-shipping {
+        background: #D73037;
+        border-radius: 24px;
+        border: none;
+        color: #FFFFFF;
+        padding: 14px 48px;
+      }
+
+      .to-cart {
+        border: none;
+        color: $red-color;
+        background-color: #FFFFFF;
+      }
+    }
   }
 }

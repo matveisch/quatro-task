@@ -105,11 +105,14 @@ const UserDataForm = () => {
                             </div>
                             <div className="input">
                                 <label htmlFor="phone"><span>*</span><span>*</span>טלפון</label>
-                                <Field id="phone" name="phone" placeholder="050-00223356"/>
+                                <Field id="phone" name="phone" placeholder="050-00223356" type="phone"/>
                             </div>
                         </div>
                     </div>
-                    <button type="submit">click</button>
+                    <div id="buttons">
+                        <button type="submit" className="to-shipping">המשך לאפשרויות משלוח</button>
+                        <button className="to-cart" type="button">{'<'} חזרה לעגלת הקניות</button>
+                    </div>
                 </Form>
             </Formik>
         </div>
