@@ -1,0 +1,57 @@
+@import '../../styles/variables';
+
+#user-data-form {
+  #login-question {
+    font-size: 16px;
+    text-align: end;
+  }
+
+  header {
+    h1 {
+      font-weight: 700;
+      font-size: 21px;
+    }
+  }
+
+  form {
+    label {
+      font-weight: 700;
+      font-size: 14px;
+
+      span {
+        color: $red-color;
+      }
+    }
+
+    .input {
+      display: flex;
+      flex-direction: column;
+
+      min-width: 346px;
+
+      border: 2px solid $border-color;
+      border-radius: 4px;
+
+      padding: 10px;
+
+      input, input::placeholder{
+        border: none;
+        outline: none;
+        height: 24px;
+        font-size: 18px;
+      }
+    }
+
+    #user-data {
+      display: flex;
+      flex-direction: column;
+      gap: 29px;
+      margin-bottom: 29px;
+
+      #passwords {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

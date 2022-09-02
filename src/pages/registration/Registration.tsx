@@ -5,6 +5,7 @@ import './Registration.css';
 import logo from '../../images/logo.png';
 
 // components
+import UserDataForm from "../../components/user-data-form/UserDataForm";
 
 const Registration = () => {
     return (
@@ -13,6 +14,7 @@ const Registration = () => {
                 <img src={logo} alt="logo"/>
                 <h1> <span>פרטי לקוח</span> {'>'} אפשרות משלוח {'>'} אמצעי תשלום</h1>
             </header>
+            <UserDataForm />
         </div>
     );
 };
