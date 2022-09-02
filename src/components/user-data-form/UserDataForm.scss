@@ -74,6 +74,7 @@
       }
 
       input {
+        cursor: pointer;
         border: 2px solid #1F3813;
       }
     }
@@ -88,6 +89,10 @@
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
+
+      button {
+        cursor: pointer;
+      }
 
       .to-shipping {
         background: #D73037;

@@ -56,6 +56,7 @@
   font-weight: 400;
 }
 #user-data-form form #checkbox input {
+  cursor: pointer;
   border: 2px solid #1F3813;
 }
 #user-data-form form .grid {
@@ -67,6 +68,9 @@
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+}
+#user-data-form form #buttons button {
+  cursor: pointer;
 }
 #user-data-form form #buttons .to-shipping {
   background: #D73037;

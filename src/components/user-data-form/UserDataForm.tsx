@@ -54,7 +54,7 @@ const SignupSchema = Yup.object().shape({
 const UserDataForm = () => {
     return (
         <div id='user-data-form'>
-            <h1 id='login-question'>האם ברשותך חשבון באתר? <span>התחבר/י לחשבון</span></h1>
+            <h1 id='login-question'>האם ברשותך חשבון באתר? <span style={{cursor: 'pointer'}}>התחברי לחשבון</span></h1>
             <Formik
                 initialValues={{
                     email: '',
