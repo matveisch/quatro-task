@@ -10,6 +10,10 @@
   justify-content: center;
   align-items: center;
 
+  .preloader-container {
+    padding-top: 0;
+  }
+
   #popup {
     background-color: #FFFFFF;
     //width: 605px;
@@ -25,16 +29,16 @@
       cursor: pointer;
     }
 
-    #popup-form {
-      #popup-header {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 25px;
-        gap: 15px;
-      }
+    #popup-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 25px;
+      gap: 15px;
+    }
 
+    #popup-form {
       .login-input {
         min-width: 465px;
       }
@@ -50,6 +54,7 @@
         text-decoration-line: underline;
         margin-top: 20px;
         margin-bottom: 40px;
+        cursor: pointer;
       }
 
       button {
@@ -59,6 +64,7 @@
         color: #FFFFFF;
         padding: 15px 0;
         width: 100%;
+        cursor: pointer;
       }
     }
   }

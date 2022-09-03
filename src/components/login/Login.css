@@ -9,6 +9,9 @@
   justify-content: center;
   align-items: center;
 }
+#login .preloader-container {
+  padding-top: 0;
+}
 #login #popup {
   background-color: #FFFFFF;
   border-radius: 10px;
@@ -21,7 +24,7 @@
   right: -30px;
   cursor: pointer;
 }
-#login #popup #popup-form #popup-header {
+#login #popup #popup-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,6 +45,7 @@
   text-decoration-line: underline;
   margin-top: 20px;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 #login #popup #popup-form button {
   background: #D73037;
@@ -50,6 +54,7 @@
   color: #FFFFFF;
   padding: 15px 0;
   width: 100%;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=Login.css.map */
