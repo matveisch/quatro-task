@@ -6,6 +6,7 @@ import axios from 'axios';
 import './UserDataForm.css';
 
 import {Props} from "../../pages/registration/Registration";
+import Input from "../../ui/input/Input";
 
 interface Values {
     email: string;
@@ -98,28 +99,10 @@ const UserDataForm = (props: Props) => {
                     <Form>
                         <h1 className='header'>פרטי משתמש</h1>
                         <div className='data-inputs'>
-                            <div className="input">
-                                <label htmlFor="email"><span>*</span>מייל</label>
-                                <Field id="email" name="email" type="email"/>
-                                {errors.email && touched.email ? (
-                                    <div className="errors">{errors.email}</div>
-                                ) : null}
-                            </div>
+                            <Input fieldName={"email"} label={'מייל'} required={true} errors={errors.email} touched={touched.email} type={'email'} />
                             <div className="grid">
-                                <div className="input">
-                                    <label htmlFor="password"><span>*</span>בחר סיסמה</label>
-                                    <Field id="password" name="password" placeholder="*******" />
-                                    {errors.password && touched.password ? (
-                                        <div className="errors">{errors.password}</div>
-                                    ) : null}
-                                </div>
-                                <div className="input">
-                                    <label htmlFor="confirmPassword"><span>*</span>אימות סיסמה</label>
-                                    <Field id="confirmPassword" name="confirmPassword" placeholder="*******" />
-                                    {errors.confirmPassword && touched.confirmPassword ? (
-                                        <div className="errors">{errors.confirmPassword}</div>
-                                    ) : null}
-                                </div>
+                                <Input fieldName={"password"} label={'בחר סיסמה'} required={true} errors={errors.password} touched={touched.password} placeholder={"*******"} />
+                                <Input fieldName={"confirmPassword"} label={'אימות סיסמה'} required={true} errors={errors.confirmPassword} touched={touched.confirmPassword} placeholder={"*******"} />
                             </div>
                         </div>
                         <div id="checkbox">
@@ -129,64 +112,16 @@ const UserDataForm = (props: Props) => {
                         <h1 className="header">כתובת למשלוח</h1>
                         <div className="data-inputs">
                             <div className="grid">
-                                <div className="input">
-                                    <label htmlFor="firstName"><span>*</span>שם פרטי</label>
-                                    <Field id="firstName" name="firstName" />
-                                    {errors.firstName && touched.firstName ? (
-                                        <div className="errors">{errors.firstName}</div>
-                                    ) : null}
-                                </div>
-                                <div className="input">
-                                    <label htmlFor="secondName"><span>*</span>שם משפחה</label>
-                                    <Field id="secondName" name="secondName" />
-                                    {errors.secondName && touched.secondName ? (
-                                        <div className="errors">{errors.secondName}</div>
-                                    ) : null}
-                                </div>
-                                <div className="input">
-                                    <label htmlFor="address"><span>*</span>כתובת- רחוב, מס׳ בית, עיר</label>
-                                    <Field id="address" name="address" placeholder="בזל"/>
-                                    {errors.address && touched.address ? (
-                                        <div className="errors">{errors.address}</div>
-                                    ) : null}
-                                </div>
-                                <div className="input">
-                                    <label htmlFor="houseNumber"><span>*</span>מס׳ בית</label>
-                                    <Field id="houseNumber" name="houseNumber" placeholder="2"/>
-                                    {errors.houseNumber && touched.houseNumber ? (
-                                        <div className="errors">{errors.houseNumber}</div>
-                                    ) : null}
-                                </div>
-                                <div className="input">
-                                    <label htmlFor="city"><span>*</span><span>*</span>עיר</label>
-                                    <Field id="city" name="city" placeholder="תל אביב יפו"/>
-                                    {errors.city && touched.city ? (
-                                        <div className="errors">{errors.city}</div>
-                                    ) : null}
-                                </div>
+                                <Input fieldName={"firstName"} label={'שם פרטי'} required={true} errors={errors.firstName} touched={touched.firstName} />
+                                <Input fieldName={"secondName"} label={'שם משפחה'} required={true} errors={errors.secondName} touched={touched.secondName} />
+                                <Input fieldName={"address"} label={'כתובת- רחוב, מס׳ בית, עיר'} required={true} errors={errors.address} touched={touched.address} placeholder={'בזל'}/>
+                                <Input fieldName={"houseNumber"} label={'מס׳ בית'} required={true} errors={errors.houseNumber} touched={touched.houseNumber} placeholder={'2'}/>
+                                <Input fieldName={"city"} label={'עיר'} required={true} errors={errors.city} touched={touched.city} placeholder={'תל אביב יפו'}/>
                                 <div className="mini-inputs">
-                                    <div className="input mini-input">
-                                        <label htmlFor="apartmentNumber"><span>*</span>דירה / כניסה</label>
-                                        <Field id="apartmentNumber" name="apartmentNumber" placeholder="1"/>
-                                        {errors.apartmentNumber && touched.apartmentNumber ? (
-                                            <div className="errors">{errors.apartmentNumber}</div>
-                                        ) : null}
-                                    </div>
-                                    <div className="input mini-input">
-                                        <label htmlFor="intercomCode"><span>*</span>קוד לבניין</label>
-                                        <Field id="intercomCode" name="intercomCode" placeholder="1234#"/>
-                                        {errors.intercomCode && touched.intercomCode ? (
-                                            <div className="errors">{errors.intercomCode}</div>
-                                        ) : null}
-                                    </div>
+                                    <Input fieldName={"apartmentNumber"} label={'דירה / כניסה'} required={true} errors={errors.apartmentNumber} touched={touched.apartmentNumber} placeholder={'1'} moreClasses={'mini-input'} />
+                                    <Input fieldName={"intercomCode"} label={'קוד לבניין'} required={true} errors={errors.intercomCode} touched={touched.intercomCode} placeholder={'1234#'} moreClasses={'mini-input'} />
                                 </div>
-                                <div className="input">
-                                    <label htmlFor="phone"><span>*</span><span>*</span>טלפון</label>
-                                    <Field id="phone" name="phone" placeholder="050-00223356" type="phone"/>
-                                    {errors.phone && touched.phone ? (
-                                        <div className="errors">{errors.phone}</div>
-                                    ) : null}
-                                </div>
+                                <Input fieldName={"phone"} label={'טלפון'} required={true} errors={errors.phone} touched={touched.phone} placeholder={'050-00223356'} type={'phone'}/>
                             </div>
                         </div>
                         <div id="buttons">

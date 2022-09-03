@@ -11,11 +11,12 @@ interface Props {
     touched: any;
     type?: string;
     placeholder?: string;
+    moreClasses?: string;
 }
 
 const Input = (props: Props) => {
     return (
-        <div className="input">
+        <div className={`input ${props.moreClasses ? props.moreClasses : null}`}>
             <label htmlFor={props.fieldName}>{props.required ? <span>*</span> : undefined}{props.label}</label>
             <Field id={props.fieldName} name={props.fieldName} type={props.type} placeholder={props.placeholder}/>
             {props.errors && props.touched ? (
