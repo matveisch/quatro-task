@@ -66,6 +66,7 @@ const Login = (props: Props) => {
                                            touched={touched.email}
                                            type={'email'}
                                            placeholder={'name@mail.com'}
+                                           moreClasses={'login-input'}
                                     />
                                     <Input fieldName={'password'}
                                            label={'סיסמה'}
@@ -74,9 +75,11 @@ const Login = (props: Props) => {
                                            touched={touched.password}
                                            type={'password'}
                                            placeholder={'סיסמה'}
+                                           moreClasses={'login-input'}
                                     />
                                 </div>
-                                <button type="submit">Submit</button>
+                                <h2 className="forgot">שכחתי סיסמה</h2>
+                                <button type="submit">כניסה לחשבון</button>
                             </Form>
                         )}
                     </Formik>

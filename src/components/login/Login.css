@@ -27,11 +27,29 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
+  gap: 15px;
+}
+#login #popup #popup-form .login-input {
+  min-width: 465px;
 }
 #login #popup #popup-form .inputs {
   display: flex;
   flex-direction: column;
   gap: 23px;
+}
+#login #popup #popup-form .forgot {
+  font-size: 16px;
+  text-decoration-line: underline;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+#login #popup #popup-form button {
+  background: #D73037;
+  border-radius: 24px;
+  border: none;
+  color: #FFFFFF;
+  padding: 15px 0;
+  width: 100%;
 }
 
 /*# sourceMappingURL=Login.css.map */

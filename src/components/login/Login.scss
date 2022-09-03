@@ -32,12 +32,33 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 25px;
+        gap: 15px;
+      }
+
+      .login-input {
+        min-width: 465px;
       }
 
       .inputs {
         display: flex;
         flex-direction: column;
         gap: 23px;
+      }
+
+      .forgot {
+        font-size: 16px;
+        text-decoration-line: underline;
+        margin-top: 20px;
+        margin-bottom: 40px;
+      }
+
+      button {
+        background: #D73037;
+        border-radius: 24px;
+        border: none;
+        color: #FFFFFF;
+        padding: 15px 0;
+        width: 100%;
       }
     }
   }

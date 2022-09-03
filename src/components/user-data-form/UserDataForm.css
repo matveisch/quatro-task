@@ -5,28 +5,8 @@
 #user-data-form #login-question span {
   color: #FF002B;
 }
-#user-data-form form label {
-  font-weight: 700;
-  font-size: 14px;
-}
-#user-data-form form label span {
-  color: #FF002B;
-}
 #user-data-form form .mini-input {
   min-width: 0 !important;
-}
-#user-data-form form .input {
-  display: flex;
-  flex-direction: column;
-  border: 2px solid rgba(31, 56, 19, 0.252732);
-  border-radius: 4px;
-  padding: 10px;
-}
-#user-data-form form .input input, #user-data-form form .input input::placeholder {
-  border: none;
-  outline: none;
-  height: 24px;
-  font-size: 18px;
 }
 #user-data-form form .mini-inputs {
   display: grid;
@@ -83,10 +63,6 @@
   border: none;
   color: #FF002B;
   background-color: #FFFFFF;
-}
-#user-data-form form .errors {
-  color: #FF002B;
-  font-size: 12px;
 }
 
 /*# sourceMappingURL=UserDataForm.css.map */

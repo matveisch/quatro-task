@@ -11,34 +11,8 @@
   }
 
   form {
-    label {
-      font-weight: 700;
-      font-size: 14px;
-
-      span {
-        color: $red-color;
-      }
-    }
-
     .mini-input {
       min-width: 0 !important;
-    }
-
-    .input {
-      display: flex;
-      flex-direction: column;
-
-      border: 2px solid $border-color;
-      border-radius: 4px;
-
-      padding: 10px;
-
-      input, input::placeholder{
-        border: none;
-        outline: none;
-        height: 24px;
-        font-size: 18px;
-      }
     }
 
     .mini-inputs {
@@ -107,11 +81,6 @@
         color: $red-color;
         background-color: #FFFFFF;
       }
-    }
-
-    .errors {
-      color: $red-color;
-      font-size: 12px;
     }
   }
 }
