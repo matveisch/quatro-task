@@ -5,7 +5,7 @@ import axios from 'axios';
 
 import './UserDataForm.css';
 
-import {Props} from "../../pages/registration/Registration";
+import {UserDataProps} from "../../pages/registration/Registration";
 import Input from "../../ui/input/Input";
 
 interface Values {
@@ -55,7 +55,7 @@ const SignupSchema = Yup.object().shape({
         .required('Required'),
 });
 
-const UserDataForm = (props: Props) => {
+const UserDataForm = (props: UserDataProps) => {
     return (
         <div id='user-data-form'>
             <h1 id='login-question'>האם ברשותך חשבון באתר? <span
@@ -83,15 +83,23 @@ const UserDataForm = (props: Props) => {
                     values: Values,
                     { setSubmitting }: FormikHelpers<Values>
                 ) => {
+                    props.setLoading(true);
+
                     await axios.post('https://jsonplaceholder.typicode.com/posts', {body: JSON.stringify(values, null, 2)}, {
                         headers: {
                             'Content-Type': 'application/json'
                         }
                     }).then(res => {
+                        props.setMessage('Form successfully submitted');
                         console.log(res);
                         setSubmitting(false);
                     }).catch(err => {
+                        props.setMessage('Error');
                         console.log(err);
+
+                        setTimeout(() => {
+                            props.setLoading(false);
+                        }, 1000)
                     });
                 }}
             >

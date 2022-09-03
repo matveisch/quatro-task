@@ -5,7 +5,7 @@ import './Login.css';
 import closePopup from '../../images/close popup.png';
 import logo from '../../images/Group 156.png';
 
-import {Props} from "../../pages/registration/Registration";
+import {LoginProps} from "../../pages/registration/Registration";
 import Input from "../../ui/input/Input";
 import axios from "axios";
 import * as Yup from "yup";
@@ -24,7 +24,7 @@ const SignupSchema = Yup.object().shape({
         .min(8, 'Must contain at least 8 chars'),
 })
 
-const Login = (props: Props) => {
+const Login = (props: LoginProps) => {
     return (
         <div id="login" style={props.popup ? {display: "flex"} : {display: "none"}}>
             <div id="popup">
@@ -50,7 +50,6 @@ const Login = (props: Props) => {
                                 }
                             }).then(res => {
                                 console.log(res);
-                                setSubmitting(false);
                             }).catch(err => {
                                 console.log(err);
                             });

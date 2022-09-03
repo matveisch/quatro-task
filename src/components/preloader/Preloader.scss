@@ -1,0 +1,36 @@
+@import '../../styles/variables';
+
+.preloader{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__circle{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+
+    &:after{
+      content: " ";
+      display: block;
+      width: 45px;
+      height: 45px;
+      margin: 8px;
+      border-radius: 50%;
+      border: 6px solid $red-color;
+      border-color: $red-color transparent $red-color transparent;
+      animation: spinner 1.5s linear infinite;
+    }
+  }
+}
+
+@keyframes spinner{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

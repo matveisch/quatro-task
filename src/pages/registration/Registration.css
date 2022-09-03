@@ -17,5 +17,11 @@
 #registration #registration-header h1 span {
   color: #FF002B;
 }
+#registration .preloader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
 
 /*# sourceMappingURL=Registration.css.map */
