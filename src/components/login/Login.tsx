@@ -61,6 +61,7 @@ const Login = (props: LoginProps) => {
                                 }).then(res => {
                                     setMessage('Form successfully submitted');
                                     console.log(res);
+                                    setSubmitting(false);
                                 }).catch(err => {
                                     setMessage('Error');
                                     console.log(err);
