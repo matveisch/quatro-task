@@ -5,6 +5,8 @@ import axios from 'axios';
 
 import './UserDataForm.css';
 
+import {Props} from "../../pages/registration/Registration";
+
 interface Values {
     email: string;
     password: string;
@@ -21,41 +23,44 @@ interface Values {
 }
 
 const SignupSchema = Yup.object().shape({
-    // email: Yup.string()
-    //     .email('Invalid email')
-    //     .required('Required'),
-    // password: Yup.string()
-    //     .required('Required')
-    //     .min(8, 'Must contain at least 8 chars'),
-    // confirmPassword: Yup.string()
-    //     .oneOf([Yup.ref('password'), null], 'Passwords must match'),
-    // firstName: Yup.string()
-    //     .min(2, 'Too Short!')
-    //     .max(50, 'Too Long!')
-    //     .required('Required'),
-    // secondName: Yup.string()
-    //     .min(2, 'Too Short!')
-    //     .max(50, 'Too Long!')
-    //     .required('Required'),
-    // address: Yup.string()
-    //     .required('Required'),
-    // houseNumber: Yup.string()
-    //     .required('Required'),
-    // city: Yup.string()
-    //     .required('Required'),
-    // apartmentNumber: Yup.string()
-    //     .required('Required'),
-    // intercomCode: Yup.string()
-    //     .required('Required'),
-    // phone: Yup.string()
-    //     .matches(/^[0][5][0|2|3|4|5|9]{1}[-]{0,1}[0-9]{7}$/, 'Must match format 05[x][-][0-9]{7}')
-    //     .required('Required'),
+    email: Yup.string()
+        .email('Invalid email')
+        .required('Required'),
+    password: Yup.string()
+        .required('Required')
+        .min(8, 'Must contain at least 8 chars'),
+    confirmPassword: Yup.string()
+        .oneOf([Yup.ref('password'), null], 'Passwords must match'),
+    firstName: Yup.string()
+        .min(2, 'Too Short!')
+        .max(50, 'Too Long!')
+        .required('Required'),
+    secondName: Yup.string()
+        .min(2, 'Too Short!')
+        .max(50, 'Too Long!')
+        .required('Required'),
+    address: Yup.string()
+        .required('Required'),
+    houseNumber: Yup.string()
+        .required('Required'),
+    city: Yup.string()
+        .required('Required'),
+    apartmentNumber: Yup.string()
+        .required('Required'),
+    intercomCode: Yup.string()
+        .required('Required'),
+    phone: Yup.string()
+        .matches(/^[0][5][0|2|3|4|5|9]{1}[-]{0,1}[0-9]{7}$/, 'Must match format 05[x][-][0-9]{7}')
+        .required('Required'),
 });
 
-const UserDataForm = () => {
+const UserDataForm = (props: Props) => {
     return (
         <div id='user-data-form'>
-            <h1 id='login-question'>האם ברשותך חשבון באתר? <span style={{cursor: 'pointer'}}>התחברי לחשבון</span></h1>
+            <h1 id='login-question'>האם ברשותך חשבון באתר? <span
+                style={{cursor: 'pointer'}}
+                onClick={() => {props.setPopup(true)}}
+            >התחברי לחשבון</span></h1>
             <Formik
                 initialValues={{
                     email: '',
