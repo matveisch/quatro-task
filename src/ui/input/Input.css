@@ -1,0 +1,27 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(31, 56, 19, 0.252732);
+  border-radius: 4px;
+  padding: 10px;
+}
+.input input, .input input::placeholder {
+  border: none;
+  outline: none;
+  height: 24px;
+  font-size: 18px;
+}
+.input label {
+  font-weight: 700;
+  font-size: 14px;
+}
+.input label span {
+  color: #FF002B;
+}
+
+.errors {
+  color: #FF002B;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=Input.css.map */

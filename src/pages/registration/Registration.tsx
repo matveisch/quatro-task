@@ -17,8 +17,8 @@ const Registration = () => {
     const [popup, setPopup] = useState(false);
 
     return (
-        <div id={'registration'}>
-            <header>
+        <div id='registration'>
+            <header id='registration-header'>
                 <img src={logo} alt="logo"/>
                 <h1> <span>פרטי לקוח</span> {'>'} אפשרות משלוח {'>'} אמצעי תשלום</h1>
             </header>

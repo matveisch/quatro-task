@@ -12,16 +12,33 @@
 
   #popup {
     background-color: #FFFFFF;
-    width: 605px;
-    height: 563px;
+    //width: 605px;
+    //height: 563px;
     border-radius: 10px;
     position: relative;
+    padding: 50px 70px;
 
     #close-btn {
       position: absolute;
       top: -30px;
       right: -30px;
       cursor: pointer;
+    }
+
+    #popup-form {
+      #popup-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
+      }
+
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+      }
     }
   }
 }

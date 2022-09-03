@@ -11,16 +11,27 @@
 }
 #login #popup {
   background-color: #FFFFFF;
-  width: 605px;
-  height: 563px;
   border-radius: 10px;
   position: relative;
+  padding: 50px 70px;
 }
 #login #popup #close-btn {
   position: absolute;
   top: -30px;
   right: -30px;
   cursor: pointer;
+}
+#login #popup #popup-form #popup-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+#login #popup #popup-form .inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
 }
 
 /*# sourceMappingURL=Login.css.map */
